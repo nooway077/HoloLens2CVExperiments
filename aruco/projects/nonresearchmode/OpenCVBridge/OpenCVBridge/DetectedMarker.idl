@@ -1,0 +1,14 @@
+namespace OpenCVBridge
+{
+    [bindable]
+    [default_interface]
+    runtimeclass DetectedMarker 
+    {
+        DetectedMarker(Int32 id,
+            Windows.Foundation.Numerics.Vector3 position,
+            Windows.Foundation.Numerics.Vector3 rotation);
+        Int32 Id();
+        Windows.Foundation.Numerics.Vector3 Position();
+        Windows.Foundation.Numerics.Vector3 Rotation();
+    }
+}

@@ -1,0 +1,21 @@
+import "DetectedMarker.idl";
+
+namespace OpenCVBridge
+{
+    [default_interface]
+    runtimeclass OpenCVHelper
+    {
+        OpenCVHelper();
+
+        Windows.Foundation.Collections.IVector<DetectedMarker> ProcessWithArUco(
+            Windows.Graphics.Imaging.SoftwareBitmap input,
+            Windows.Foundation.Numerics.Vector2 focalLength,
+            Windows.Foundation.Numerics.Vector2 principalPoint,
+            Windows.Foundation.Numerics.Vector3 radialDistortion,
+            Windows.Foundation.Numerics.Vector2 tangentialDistortion,
+            Int32 dictionaryId,
+            Single markerLength,
+            out Int32 frameProcessingTime);
+
+    }
+}
