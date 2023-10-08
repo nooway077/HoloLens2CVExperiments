@@ -1,0 +1,16 @@
+namespace HoloLens2CVForUnity
+{
+    [bindable]
+    [default_interface]
+    runtimeclass DetectedArUcoMarker
+    {
+          DetectedArUcoMarker(Int32 id,
+            Windows.Foundation.Numerics.Vector3 position,
+            Windows.Foundation.Numerics.Vector3 rotation,
+            Windows.Foundation.Numerics.Matrix4x4 cameraToWorldUnity);
+        Int32 Id();
+        Windows.Foundation.Numerics.Vector3 Position();
+        Windows.Foundation.Numerics.Vector3 Rotation();
+        Windows.Foundation.Numerics.Matrix4x4 CameraToWorldUnity();
+    }
+}

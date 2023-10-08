@@ -1,0 +1,44 @@
+// https://learn.microsoft.com/en-us/uwp/midl-3/troubleshooting MIDL2011 error
+// https://learn.microsoft.com/en-us/cpp/preprocessor/hash-import-directive-cpp?view=msvc-170
+import "DetectedArUcoMarker.idl";
+
+namespace HoloLens2CVForUnity
+{
+    [default_interface]
+    runtimeclass ResearchModeCV
+    {
+        ResearchModeCV();
+
+        UInt8[] GetLFCameraBuffer(out Int64 ts);
+        UInt8[] GetRFCameraBuffer(out Int64 ts);
+
+        Boolean LFImageUpdated();
+        Boolean RFImageUpdated();
+        Boolean ArUcoDetectionsUpdated();
+
+        Int32 GetDetectedMarkersCount();
+        Int32 GetFrameProcessingTime();
+
+        void InitializeSpatialCamerasFront();
+        void StartSpatialCamerasFrontLoop();
+        void StopAllSensorDevice();
+
+        void SetReferenceCoordinateSystem(Windows.Perception.Spatial.SpatialCoordinateSystem refCoord);
+
+        void SetCameraIntrinsics(
+            Int32 cameraType, 
+            Windows.Foundation.Numerics.Vector2 focalLength, 
+            Windows.Foundation.Numerics.Vector2 principalPoint, 
+            Windows.Foundation.Numerics.Vector3 radialDistortion, 
+            Windows.Foundation.Numerics.Vector2 tangentialDistortion);
+
+        void Configure(
+            Int32 _sensor, 
+            Boolean _enableBuffer,
+            Boolean _enableArUcoDetector,
+            Single _markerSize, 
+            Int32 _dictId);
+
+        Windows.Foundation.Collections.IVector<DetectedArUcoMarker> GetDetectedMarkers();
+    }
+}
