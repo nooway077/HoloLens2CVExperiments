@@ -33,5 +33,3 @@ for count in range(markerstogenerate) :
     marker_path = os.path.join(outputdir, marker_name)
 
     cv2.imwrite(marker_path, marker)
-
-cv2.waitKey(0)

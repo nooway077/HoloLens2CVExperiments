@@ -55,5 +55,3 @@ for image in os.listdir(sourceDir):
 
         marker_path = os.path.join(outputdir, image)
         cv2.imwrite(marker_path, canvas)
-
-cv2.waitKey(0)
