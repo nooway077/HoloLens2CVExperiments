@@ -36,7 +36,7 @@ git clone https://github.com/nooway077/HoloLens2CVExperiments.git
 `ArUcoTracking` scene is ticked and the **Universal Windows Platform** is selected.
 8. Click **Build** and select the output directory.
 8. Once Unity is finished with the build process, inside the output directory open up the `HoloLens2CVUnity.sln` using **Visual Studio 2022**.
-10. Select **ARM64** is selected as build platform and add `Visual C++ 2015-2019 UWP Desktop Runtime` as reference to **HoloLens2CVUnity (Universal Windows)** project. **Build & Deploy** to the Device using either the IP address or Local USB connection.
+10. Select **ARM64** as build platform and add `Visual C++ 2015-2019 UWP Desktop Runtime` as reference to **HoloLens2CVUnity (Universal Windows)** project. **Build & Deploy** to the Device using either the IP address or Local USB connection.
 11. On the HoloLens 2, launch the **Start Menu** using the *"Start Gesture"* then search for **HoloLens2CVUnity** app and tap it to start.
 12. Grant all access requests. When you move your gaze to the printed out paper containing the aruco markers, virtual cubes should be rendered on top of the markers.
 
