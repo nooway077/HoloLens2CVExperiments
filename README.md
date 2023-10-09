@@ -78,6 +78,9 @@ The images will be saved on the PC running the `TCPServer.py` script to the `dat
 python Calibrate_PhotoVideo.py
 ```
 16. The computed calibration parameters are saved to `PhotoVideo_intrisics.yaml` file. Open this file with your favourite text editor input these values to the `ArUcoTracking` scene's `ScriptConfiguration/Custom Camera Intrinsics` field.
+
+<img src="calib.params.png" alt="package.appx" width="450"/>
+
 17. Switch back to the `Scenes/ArUcoTracking` scene in the **Build Settings**. (untick `Scenes/CameraCalibration` scene)
 18. Build and Deploy again the **HoloLens2CVUnity** project.
 19. Try the app with the new calibration parameters.
@@ -99,6 +102,8 @@ Note: *Step 8, 9, 10, 11, 12* are **only required once** if the build output fol
 2. rescap
 3. <rescap:Capability Name="perceptionSensorsExperimental" />
 ```
+<img src="package.appx.png" alt="package.appx" width="500"/>
+
 11. Right click on **HoloLens2CVResModeUnity (Universal Windows)** project and **Add Reference**.
 12. Select `Visual C++ 2015-2019 UWP Desktop Runtime`, then click **Apply**.
 13. **Build & Deploy** the app to the HoloLens 2.
@@ -135,6 +140,8 @@ python TCPServer.py
 7. Build and Deploy the project as described in the **Quick Start** section.
 8. Start the app on the HoloLens 2.
 9. When you move your gaze to the printed out paper containing the aruco markers, virtual cubes should be rendered on top of the markers, and the `TCPServer.py` script should print out the rotation & translation vectors of the observed markers relative to the PV camera.
+
+<img src="received.data.png" alt="package.appx" width="450"/>
 
 ## Acknowledgement
 
