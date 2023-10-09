@@ -77,7 +77,10 @@ The images will be saved on the PC running the `TCPServer.py` script to the `dat
 ```zsh
 python Calibrate_PhotoVideo.py
 ```
-16. The computed calibration parameters are saved to `PhotoVideo_intrisics.yaml` file, input these values to the `ArUcoTracking` scene's `ScriptConfiguration/Custom Camera Intrinsics` field.
+16. The computed calibration parameters are saved to `PhotoVideo_intrisics.yaml` file. Open this file with your favourite text editor input these values to the `ArUcoTracking` scene's `ScriptConfiguration/Custom Camera Intrinsics` field.
+17. Switch back to the `Scenes/ArUcoTracking` scene in the **Build Settings**. (untick `Scenes/CameraCalibration` scene)
+18. Build and Deploy again the **HoloLens2CVUnity** project.
+19. Try the app with the new calibration parameters.
 
 ### Calibrating the Visible Light cameras
 Note: *Step 8, 9, 10, 11, 12* are **only required once** if the build output folder containing the solution file is not deleted. 
@@ -99,19 +102,24 @@ Note: *Step 8, 9, 10, 11, 12* are **only required once** if the build output fol
 11. Right click on **HoloLens2CVResModeUnity (Universal Windows)** project and **Add Reference**.
 12. Select `Visual C++ 2015-2019 UWP Desktop Runtime`, then click **Apply**.
 13. **Build & Deploy** the app to the HoloLens 2.
-14. Start the `TCPServer.py` from `HoloLens2CVExperiments/aruco-pose-estimation/utilities` by running 
+14. Open a web browser and type your HoloLens 2's IP address to the address bar. Login with your **Device Portal Credentials**.
+15. In the **Device Portal** navigate to **System > Research Mode** and tick **Allow Access to sensor streams** checkbox, then **REBOOT** your device.
+16. Start the `TCPServer.py` from `HoloLens2CVExperiments/aruco-pose-estimation/utilities` by running 
 ```zsh
 python TCPServer.py
 ```
-15. Connect the **Xbox controller** to the HoloLens 2 using **Bluetooth**.
+17. Connect the **Xbox controller** to the HoloLens 2 using **Bluetooth**.
 16. On the HoloLens 2 open the **Start Menu** and tap **HoloLens2CVResModeUnity**. Grant all requested access. The app will display a realtime preview from the VLC cameras **(Left front and Right front)**.
-17. Move your gaze to the printed out pattern.png and take pictures of it **from different angles and distances** by moving around and pressing the **A Button** on the **Xbox controller**. Once enough pictures are saved, head back to the PC the `TCPServer.py` is running on.
-18. Inside the `HoloLens2CVExperiments/aruco-pose-estimation/utilities` directory run the following commands:
+18. Move your gaze to the printed out pattern.png and take pictures of it **from different angles and distances** by moving around and pressing the **A Button** on the **Xbox controller**. Once enough pictures are saved, head back to the PC the `TCPServer.py` is running on.
+19. Inside the `HoloLens2CVExperiments/aruco-pose-estimation/utilities` directory run the following commands:
 ```zsh
 python Calibrate_LeftFront.py
 python Calibrate_RightFront.py
 ```
-19. The computed calibration parameters will be saved to `LeftFront_intrisics.yaml` & `RightFront_intrisics.yaml` files. Open these files with your favourite text editor and input the values to the `ArUcoTracking` scene's `ScriptConfiguration/Camera Intrinsics` field.
+20. The computed calibration parameters will be saved to `LeftFront_intrisics.yaml` & `RightFront_intrisics.yaml` files. Open these files with your favourite text editor and input the values to the `ArUcoTracking` scene's `ScriptConfiguration/Camera Intrinsics` field.
+21. Switch back to the `Scenes/ArUcoTracking` scene in the **Build Settings**.
+22. Build and Deploy again the **HoloLens2CVResModeUnity** project.
+23. Try the app with the new calibration parameters.
 
 ### Receiving aruco marker data from the HoloLens 2
 Note: This feature is not implemented in the **researchmode project**.
@@ -121,7 +129,7 @@ Note: This feature is not implemented in the **researchmode project**.
 ```zsh
 python TCPServer.py
 ```
-4. Open the HoloLens2CVUnity project from Unity Hub.
+4. Open the **HoloLens2CVUnity** project from Unity Hub.
 5. In the Unity Editor, open `Assets/ArUcoTracking` scene then click `ScriptConfiguration` object inside the **Scene Hierarchy**.
 6. Inside the `ScriptConfiguration` there is a checkbox called `Send Detected ArUco Data Via TCP`, make sure that is checked.
 7. Build and Deploy the project as described in the **Quick Start** section.
