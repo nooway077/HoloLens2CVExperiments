@@ -102,7 +102,7 @@ Note: *Step 8, 9, 10, 11, 12* are **only required once** if the build output fol
 2. rescap
 3. <rescap:Capability Name="perceptionSensorsExperimental" />
 ```
-<img src="package.appx.png" alt="package.appx" width="500"/>
+<img src="package.appx.png" alt="package.appx" width="600"/>
 
 11. Right click on **HoloLens2CVResModeUnity (Universal Windows)** project and **Add Reference**.
 12. Select `Visual C++ 2015-2019 UWP Desktop Runtime`, then click **Apply**.
@@ -137,9 +137,10 @@ python TCPServer.py
 4. Open the **HoloLens2CVUnity** project from Unity Hub.
 5. In the Unity Editor, open `Assets/ArUcoTracking` scene then click `ScriptConfiguration` object inside the **Scene Hierarchy**.
 6. Inside the `ScriptConfiguration` there is a checkbox called `Send Detected ArUco Data Via TCP`, make sure that is checked.
-7. Build and Deploy the project as described in the **Quick Start** section.
-8. Start the app on the HoloLens 2.
-9. When you move your gaze to the printed out paper containing the aruco markers, virtual cubes should be rendered on top of the markers, and the `TCPServer.py` script should print out the rotation & translation vectors of the observed markers relative to the PV camera.
+7. Under `TCP Client (Script)` enter the **IP address** of your PC on which the `TCPServer.py` is running. **For this to work the PC and the HoloLens 2 should be on the same subnet.**
+8. Build and Deploy the project as described in the **Quick Start** section.
+9. Start the app on the HoloLens 2.
+10. When you move your gaze to the printed out paper containing the aruco markers, virtual cubes should be rendered on top of the markers, and the `TCPServer.py` script should print out the rotation & translation vectors of the observed markers relative to the PV camera.
 
 <img src="received.data.png" alt="package.appx" width="450"/>
 
