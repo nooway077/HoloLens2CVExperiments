@@ -15,8 +15,8 @@ This repo contains the project files I used during my thesis work. It implements
 ## Prerequisites
 To test out this repo's full functionality, you'll need to have the following hardware and software ready:
 
-- A PC running at least **Windows 10 19044.3448**
-- A Microsoft HoloLens 2 device
+- A PC running at least **Windows 10 build 19044.3448**
+- A **Microsoft HoloLens 2** device
 - An Xbox Controller with **Bluetooth capability**
 - Microsoft Visual Studio 2022 installed with **UWP Platform developent modules**
 - Unity Hub with **Unity 2023.3.3f1** + **UWP Build Support** installed
