@@ -21,6 +21,7 @@ To test out this repo's full functionality, you'll need to have the following ha
 - Microsoft Visual Studio 2022 installed with **UWP Platform developent modules**
 - Unity Hub with **Unity 2023.3.3f1** + **UWP Build Support** installed
 - Python 3 with **opencv-python & opencv-python-contrib** installed
+- Git for Windows installed
 
 ## Quick Start
 1. Clone this repo:
