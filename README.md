@@ -1,5 +1,5 @@
 # HoloLens2CVExperiments
-This repo contains the project files I used during my thesis work. It implements ArUco marker detection and pose estimation with OpenCV and Unity using the Microsoft HoloLens 2's Photo Video or Visible Light cameras.
+This repo contains the project files I used during my thesis work. It implements **ArUco** marker detection and pose estimation with **OpenCV** and **Unity** on **Microsoft HoloLens 2** devices using the built in sensors.
 
 ## Table of contents
 
