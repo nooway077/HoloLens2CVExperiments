@@ -10,7 +10,7 @@ This repo contains the project files I used during my thesis work. It implements
   - [Calibrating the Photo Video camera](#calibrating-the-photo-video-camera)
   - [Calibrating the Visible Light cameras](#calibrating-the-visible-light-cameras)
   - [Receiving aruco marker data from the HoloLens 2](#receiving-aruco-marker-data-from-the-hololens-2)
-- [Acknowledgement](#acknowledgement)
+- [Acknowledgements](#acknowledgements)
 
 ## Prerequisites
 To test out this repo's full functionality, you'll need to have the following hardware and software ready:
@@ -145,7 +145,7 @@ python TCPServer.py
 
 <img src="received.data.png" alt="package.appx" width="450"/>
 
-## Acknowledgement
+## Acknowledgements
 
 D. Ungureanu, F. Bogo, S. Galliani, P. Sama, X. Duan, C. Meekhof, J. Stühmer, T.J. Cashman, B. Tekin, J.L. Schönberger, B. Tekin, P. Olszta, M. Pollefeys, HoloLens 2 Research Mode as a Tool for Computer Vision Research, ArXiv:2008.11239. (2020). https://arxiv.org/abs/2008.11239
 
