@@ -30,7 +30,7 @@ git clone https://github.com/nooway077/HoloLens2CVExperiments.git
 ```
 2. Inside the `HoloLens2CVExperiments/aruco-pose-estimation/opencv` directory, you will find pregenerated aruco markers with A4 size. Print it out.
 3. Measure at least one aruco marker's side on the print and take note of it.
-4. Open up Unity Hub and load the **HoloLens2CVUnity** project from `HoloLens2CVExperiments/aruco-pose-estimation/projects/nonresearchmode` directory. IF Unity displays compilation error warning, press **Ignore**.
+4. Open up Unity Hub and load the **HoloLens2CVUnity** project from `HoloLens2CVExperiments/aruco-pose-estimation/projects/nonresearchmode` directory. If Unity displays warning about the project version, press **Continue**. If Unity displays compilation error warnings, press **Ignore**. Make sure you click **Yes** when Unity asks to enable **New Input System**.
 5. In the Unity Editor open the `ArUcoTracking` scene from the `Assets/Scenes` directory and click on the `ScriptConfiguration` object.
 6. Enter the length of the marker's side you've measured earlier into the `Marker Size` field. **(The unit is in meters so convert it)**
 7. In the Unity Editor open up the **Build Settings** and make sure the 
