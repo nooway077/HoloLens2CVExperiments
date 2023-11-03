@@ -18,7 +18,7 @@ To test out this repo's full functionality, you'll need to have the following ha
 - A PC running at least **Windows 10 build 19044.3448**
 - A **Microsoft HoloLens 2** device
 - An Xbox Controller with **Bluetooth capability**
-- Microsoft Visual Studio 2022 installed with **UWP Platform developent modules**
+- Microsoft Visual Studio 2022 installed with **UWP Platform developent modules** and **MSVC ARM64, ARM64EC build tools, ARM 64 Spectre-mitigated libraries**
 - Unity Hub with **Unity 2023.3.3f1** + **UWP Build Support** installed
 - Python 3 with **opencv-python & opencv-python-contrib** installed
 - Git for Windows installed
@@ -30,19 +30,20 @@ git clone https://github.com/nooway077/HoloLens2CVExperiments.git
 ```
 2. Inside the `HoloLens2CVExperiments/aruco-pose-estimation/opencv` directory, you will find pregenerated aruco markers with A4 size. Print it out.
 3. Measure at least one aruco marker's side on the print and take note of it.
-4. Open up Unity Hub and load the **HoloLens2CVUnity** project from `HoloLens2CVExperiments/aruco-pose-estimation/projects/nonresearchmode` directory.
+4. Open up Unity Hub and load the **HoloLens2CVUnity** project from `HoloLens2CVExperiments/aruco-pose-estimation/projects/nonresearchmode` directory. IF Unity displays compilation error warning, press **Ignore**.
 5. In the Unity Editor open the `ArUcoTracking` scene from the `Assets/Scenes` directory and click on the `ScriptConfiguration` object.
 6. Enter the length of the marker's side you've measured earlier into the `Marker Size` field. **(The unit is in meters so convert it)**
 7. In the Unity Editor open up the **Build Settings** and make sure the 
-`ArUcoTracking` scene is ticked and the **Universal Windows Platform** is selected.
-8. Click **Build** and select the output directory.
+`ArUcoTracking` scene is ticked and the **Universal Windows Platform** is selected. (Add `ArUcoTracking` scene to **Scenes to Build** if its not there.)
+8. Switch **Architecture** to **ARM 64-bit** and then click **Build** and select the output directory.
 8. Once Unity is finished with the build process, inside the output directory open up the `HoloLens2CVUnity.sln` using **Visual Studio 2022**.
-10. Select **ARM64** as build platform and add `Visual C++ 2015-2019 UWP Desktop Runtime` as reference to **HoloLens2CVUnity (Universal Windows)** project. **Build & Deploy** to the Device using either the IP address or Local USB connection.
-11. On the HoloLens 2, launch the **Start Menu** using the *"Start Gesture"* then search for **HoloLens2CVUnity** app and tap it to start.
-12. Grant all access requests. When you move your gaze to the printed out paper containing the aruco markers, virtual cubes should be rendered on top of the markers.
+10. Select **ARM64** as build platform and add `Visual C++ 2015-2019 UWP Desktop Runtime` as reference to **HoloLens2CVUnity (Universal Windows)** project. 
+11. **Build & Deploy** to the Device using either the IP address or Local USB connection.
+12. On the HoloLens 2, launch the **Start Menu** using the *"Start Gesture"* then search for **HoloLens2CVUnity** app and tap it to start.
+13. Grant all access requests. When you move your gaze to the printed out paper containing the aruco markers, virtual cubes should be rendered on top of the markers.
 
 ## Usage
-There are utility scripts included for generating aruco markers, calibrating the cameras and receiving data from the HoloLens 2. The following chapters will show you how to use these.
+There are utility scripts included for generating aruco markers, calibrating the cameras and receiving data from the HoloLens 2. The following chapters will show you how to use these. Note: Continue with the steps bellow **after** you have completed the [Quick Start](#quick-start) chapter.
 
 ### Generating aruco markers
 1. Open a terminal or command prompt and change working directory to `HoloLens2CVExperiments/aruco-pose-estimation/utilities`
