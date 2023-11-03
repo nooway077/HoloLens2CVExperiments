@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ArUcoTracking.unity
+    guid: 0fa49ad8d3e29c3439ccae056830fe76
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b9e62e651c954e3429f0db9d1e3fbaa2, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 89671489b46721c46aea3c57035bfb29, type: 2}
