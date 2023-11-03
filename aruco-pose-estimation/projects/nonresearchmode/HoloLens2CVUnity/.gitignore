@@ -21,6 +21,8 @@
 /*.userprefs
 /*.pidb
 /*.booproj
+/*.pfx
+/*.pfx.meta
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
