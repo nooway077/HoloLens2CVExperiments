@@ -141,17 +141,22 @@ public class MediaCapturer
 
                 frameSource = _captureManager.FrameSources[sourceInfo.Id];
 
-                var selectedFormat = frameSource.SupportedFormats.First(
+                var selectedFormat = frameSource.SupportedFormats.FirstOrDefault(
                     format => format.VideoFormat.Width == width && format.VideoFormat.Height == height &&
                     format.FrameRate.Numerator / format.FrameRate.Denominator == frameRate);
 
-                await frameSource.SetFormatAsync(selectedFormat);
+                if (selectedFormat != null)
+	            {
+                     await frameSource.SetFormatAsync(selectedFormat);
+                     _frameReader = await _captureManager.CreateFrameReaderAsync(frameSource, subtype);
+                     _frameReader.AcquisitionMode = MediaFrameReaderAcquisitionMode.Realtime;
 
-                _frameReader = await _captureManager.CreateFrameReaderAsync(frameSource, subtype);
-                _frameReader.AcquisitionMode = MediaFrameReaderAcquisitionMode.Realtime;
-
-                await _frameReader.StartAsync();
-                IsCapturing = true;
+                     await _frameReader.StartAsync();
+                     IsCapturing = true;
+	            } else
+                {
+                    throw new Exception("Invalid frameSource format");
+                }                
             }
         }
     }

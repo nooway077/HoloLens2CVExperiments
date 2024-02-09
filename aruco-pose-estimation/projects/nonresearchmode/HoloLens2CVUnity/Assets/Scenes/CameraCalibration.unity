@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbf495e1244b61498b71be0562591ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnableDBGDisplay: 0
+  EnableDBGDisplay: 1
   output: {fileID: 142583946}
 --- !u!1 &142583944
 GameObject:
