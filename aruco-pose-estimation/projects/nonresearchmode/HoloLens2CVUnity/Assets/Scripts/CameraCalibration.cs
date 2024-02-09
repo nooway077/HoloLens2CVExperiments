@@ -61,6 +61,11 @@ public class CameraCalibration : MonoBehaviour
                     _imageHeight = 504;
                     break;
 
+                case CameraUtils.MediaCaptureProfiles.HL2_1280x720:
+                    _imageWidth = 1280;
+                    _imageHeight = 720;
+                    break;
+
                 default:
                     _imageWidth = 0;
                     _imageHeight = 0;

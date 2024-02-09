@@ -10,6 +10,7 @@ public abstract class CameraUtils
     {
         HL2_2272x1278,
         HL2_896x504,
+        HL2_1280x720
     }
 
     // https://github.com/doughtmw/display-calibration-hololens/blob/main/unity-sandbox/HoloLens2-Display-Calibration/Assets/Scripts/NetworkBehaviour.cs#L641

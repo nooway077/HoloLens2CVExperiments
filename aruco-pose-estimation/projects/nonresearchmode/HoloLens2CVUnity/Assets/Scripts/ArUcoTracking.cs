@@ -75,6 +75,11 @@ public class ArUcoTracking : MonoBehaviour
                     height = 504;
                     break;
 
+                case CameraUtils.MediaCaptureProfiles.HL2_1280x720:
+                    width = 1280;
+                    height = 720;
+                    break;
+
                 default:
                     width = 0;
                     height = 0;
