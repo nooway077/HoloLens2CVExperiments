@@ -19,7 +19,7 @@ To test out this repo's full functionality, you'll need to have the following ha
 - A **Microsoft HoloLens 2** device
 - An Xbox Controller with **Bluetooth capability**
 - Microsoft Visual Studio 2022 installed with **UWP Platform developent modules** and **MSVC ARM64, ARM64EC build tools, ARM 64 Spectre-mitigated libraries**
-- Unity Hub with **Unity 2023.3.3f1** + **UWP Build Support** installed
+- Unity Hub with **Unity 2022.3.3f1** + **UWP Build Support** installed
 - Python 3 with **opencv-python & opencv-python-contrib** installed
 - Git for Windows installed
 
